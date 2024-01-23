@@ -16,6 +16,17 @@ function atualizarTarefas () {
     localStorage.setItem('tarefas', JSON.stringify(tarefas))
 }
 
+function mostrarListaDeTarefas() {
+    ulTarefas.innerHTML = ''
+
+    tarefas.forEach(tarefa => {
+        const elementoTarefa = criarElementoTarefa(tarefa);
+        ulTarefas.append(elementoTarefa);
+    });
+}
+
+mostrarListaDeTarefas();
+
 function criarElementoTarefa(tarefa) {
     const li = document.createElement('li')
     li.classList.add('app__section-task-list-item')
