@@ -16,15 +16,6 @@ function atualizarTarefas () {
     localStorage.setItem('tarefas', JSON.stringify(tarefas))
 }
 
-function mostrarListaDeTarefas() {
-    ulTarefas.innerHTML = ''
-
-    tarefas.forEach(tarefa => {
-        const elementoTarefa = criarElementoTarefa(tarefa);
-        ulTarefas.append(elementoTarefa);
-    });
-}
-
 mostrarListaDeTarefas();
 
 function criarElementoTarefa(tarefa) {
