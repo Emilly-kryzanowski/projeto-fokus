@@ -127,5 +127,6 @@ const removerTarefas  = (somenteCompletas) => {
 }
 
 
-btnRemoverConcluidas.onclick = () => removerTarefas(true);
+btnRemoverConcluidas.onclick = () => { removerTarefas(true);
 btnRemoverTodas.onclick = () => removerTarefas(false);
+}
